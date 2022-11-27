@@ -1,0 +1,12 @@
+FROM node:11.15.0-stretch
+SHELL ["/bin/bash", "--login", "-c"]
+RUN apt update
+RUN apt install git -y
+RUN apt install curl -y
+RUN . ~/.bashrc
+RUN git clone https://github.com/Pavaz97/we-plant-api.git
+WORKDIR /we-plant-api
+RUN yarn install
+CMD [ "yarn","start" ]
+EXPOSE 9000
+EXPOSE 3001
