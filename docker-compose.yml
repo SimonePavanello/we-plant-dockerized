@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   yarn:
-    platform: linux/x86_64 # specify the architecture here
+    platform: linux/amd64 # specify the architecture here
     container_name: we-plant-admin
     restart: always
     build:
@@ -11,7 +11,7 @@ services:
       - "9000:9000"
       - "3001:3001"
   node:
-    platform: linux/x86_64 # specify the architecture here
+    platform: linux/amd64 # specify the architecture here
     container_name: we-plant-app
     restart: always
     build: 
@@ -20,7 +20,7 @@ services:
     ports:
       - "8100:8100"
   maven:
-    platform: linux/x86_64 # specify the architecture here
+    platform: linux/amd64 # specify the architecture here
     depends_on:
       - db
     container_name: we-plant-api
@@ -36,7 +36,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=password
       
   db:
-    platform: linux/x86_64 # specify the architecture here
+    platform: linux/amd64 # specify the architecture here
     build:
       context: postgres
       dockerfile: Dockerfile.dev
