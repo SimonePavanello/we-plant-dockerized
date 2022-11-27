@@ -5,7 +5,6 @@ RUN apt install git -y
 RUN apt install curl -y
 RUN . ~/.bashrc
 RUN git clone https://github.com/Pavaz97/we-plant-app.git
-COPY we-plant-app .
 WORKDIR /we-plant-app
 RUN git pull
 RUN npm install
