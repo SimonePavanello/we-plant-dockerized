@@ -10,6 +10,7 @@ services:
     ports:
       - "9000:9000"
       - "3001:3001"
+      - "9060:9060"
   node:
     platform: linux/amd64 # specify the architecture here
     container_name: we-plant-app
