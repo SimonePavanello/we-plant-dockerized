@@ -10,4 +10,3 @@ RUN yarn install
 CMD [ "yarn","start" ]
 EXPOSE 9000
 EXPOSE 3001
-EXPOSE 9060
